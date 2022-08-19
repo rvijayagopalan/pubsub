@@ -1,0 +1,6 @@
+dapr run --app-id pubsub-pub --app-port 9001 --dapr-http-port 3601 --dapr-grpc-port 60001 --components-path ./dapr-components mvn spring-boot:run
+
+dapr run --app-id pubsub-sub --app-port 9002 --dapr-http-port 3602 --dapr-grpc-port 60002 --components-path ./dapr-components mvn spring-boot:run
+
+
+http://localhost:8080/admin/v2/persistent/public/default/test-topic/stats
